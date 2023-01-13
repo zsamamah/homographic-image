@@ -11,18 +11,18 @@ import sys
 
 # 1
 picture = "images/picture.png"
-# cam = cv.VideoCapture(0)
-# while True:
-#     ret_val, img = cam.read()
-#     if cv.waitKey(1) == 27:
-#         cv.imwrite(picture, img)
-#         break
-#     elif img is None:
-#         sys.exit('Couldn`t read the image')
-#         break
-#     cv.imshow('My Webcam', img)
-#
-# del cam
+cam = cv.VideoCapture(0)
+while True:
+    ret_val, img = cam.read()
+    if cv.waitKey(1) == 27:
+        cv.imwrite(picture, img)
+        break
+    elif img is None:
+        sys.exit('Couldn`t read the image')
+        break
+    cv.imshow('My Webcam', img)
+
+del cam
 
 # 2
 img = cv.imread(picture)
